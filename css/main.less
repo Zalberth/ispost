@@ -1,5 +1,5 @@
 .opacity_cross(@opcty) {
-	 @opacityPercentage: @opcty * 100;
+	  @opacityPercentage: @opcty * 100;
 	  filter: ~"alpha(opacity = (@{opacityPercentage}))";
       -moz-opacity:@opcty;  
       -khtml-opacity:@opcty;  
@@ -58,6 +58,7 @@
 	position: absolute;
 	top: 20px;
 	left:250px;
+	cursor: pointer;
 }
 #centerZone {
 	position: relative;
@@ -142,29 +143,27 @@
 @basicBottom:55px;
 @gap:15px;
 @inputBorderradius:8px;
-#urname {
+.inputStyle() {
 	position: absolute;
 	left: @leftT;
-	bottom:@basicBottom;
 	width: @inputWidth;
 	height: @inputHeight;
+	border: none;
+	padding: 0;
 	border-radius:@inputBorderradius;
+}
+#urname {
+    .inputStyle();	
+	bottom:@basicBottom;
 }
 #urclass {
-	position: absolute;
-	left: @leftT;
+	.inputStyle();	
 	bottom: @basicBottom+@gap+ @inputHeight;
-	height: @inputHeight;
-	width: @inputWidth;
-	border-radius:@inputBorderradius;
+	
 }
 #urphone {
-	position: absolute;
-	left: @leftT;
+	.inputStyle();	
 	bottom: @basicBottom+@gap*2 + @inputHeight*2;
-	height: @inputHeight;
-	width: @inputWidth;
-	border-radius:@inputBorderradius;
 }
 #footer {
 	width: 100%;

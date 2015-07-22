@@ -34,6 +34,7 @@
   position: absolute;
   top: 20px;
   left: 250px;
+  cursor: pointer;
 }
 #hublists {
   position: relative;
@@ -102,9 +103,127 @@
   transition: top 0.4s ease;
 }
 #displayArea {
+  position: relative;
   width: 800px;
   height: 400px;
-  background-color: blue;
-  opacity: 0.2;
+  background-color: white;
+  border: 2px dashed black;
   margin: 30px auto;
+}
+#displayArea .recruit {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  top: 0;
+  right: 0;
+  background-color: green;
+  filter: alpha(opacity = (70));
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+}
+#displayArea .confirmBtn {
+  position: absolute;
+  width: 100px;
+  bottom: 20px;
+  right: 120px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  line-height: 40px;
+  font-family: '微软雅黑';
+  background-color: blue;
+}
+#displayArea .confirmBtn:hover {
+  background-color: #0e13d4;
+}
+#displayArea .nextTime {
+  position: absolute;
+  width: 100px;
+  bottom: 20px;
+  right: 10px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  line-height: 40px;
+  font-family: '微软雅黑';
+  background-color: #8080a1;
+}
+#displayArea .nextTime:hover {
+  background-color: #B6B6E0;
+}
+#displayArea .picZone {
+  z-index: 1;
+  width: 40%;
+  height: 100%;
+  background-color: blue;
+  filter: alpha(opacity = (20));
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#displayArea .picZone span {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 50px;
+}
+#displayArea .explains {
+  z-index: 1;
+  width: 60%;
+  height: 100%;
+  background-color: red;
+  filter: alpha(opacity = (20));
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#displayArea .explains span {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-size: 20px;
+}
+#urname {
+  right: 610px;
+  position: absolute;
+  bottom: 20px;
+  border: none;
+  padding: 0;
+  width: 175px;
+  height: 40px;
+  border-radius: 5px;
+}
+#urclass {
+  right: 425px;
+  position: absolute;
+  bottom: 20px;
+  border: none;
+  padding: 0;
+  width: 175px;
+  height: 40px;
+  border-radius: 5px;
+}
+#urphone {
+  right: 240px;
+  position: absolute;
+  bottom: 20px;
+  border: none;
+  padding: 0;
+  width: 175px;
+  height: 40px;
+  border-radius: 5px;
 }

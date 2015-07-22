@@ -9,4 +9,7 @@ $(function() {
 			$(this).css('display','none');
 		});
 	});
+	$('#logoTitle').on('click',function() {
+		 window.location.href='index.html';
+	});
 })

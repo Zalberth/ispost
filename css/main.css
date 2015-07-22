@@ -45,6 +45,7 @@
   position: absolute;
   top: 20px;
   left: 250px;
+  cursor: pointer;
 }
 #centerZone {
   position: relative;
@@ -124,26 +125,32 @@
 #urname {
   position: absolute;
   left: 70px;
-  bottom: 55px;
   width: 260px;
   height: 30px;
+  border: none;
+  padding: 0;
   border-radius: 8px;
+  bottom: 55px;
 }
 #urclass {
   position: absolute;
   left: 70px;
-  bottom: 100px;
-  height: 30px;
   width: 260px;
+  height: 30px;
+  border: none;
+  padding: 0;
   border-radius: 8px;
+  bottom: 100px;
 }
 #urphone {
   position: absolute;
   left: 70px;
-  bottom: 145px;
-  height: 30px;
   width: 260px;
+  height: 30px;
+  border: none;
+  padding: 0;
   border-radius: 8px;
+  bottom: 145px;
 }
 #footer {
   width: 100%;

@@ -50,6 +50,7 @@
 	position: absolute;
 	top: 20px;
 	left:250px;
+	cursor: pointer;
 }
 #hublists {
 	position: relative;
@@ -106,11 +107,117 @@
 	.transition_define(@prop:top; @duration:0.4s; @mode:ease);
 }
 
-
+@gap:10px;
+@btnWidth:100px;
+@btnBottomMargin:20px;
+@btnHeight:40px;
 #displayArea {
+	position: relative;
 	width: 800px;
 	height: 400px;
-	background-color: blue;
-	opacity: 0.2;
+	background-color: white;
+	border: 2px dashed black;
 	margin: 30px auto;
+	& .recruit {
+		z-index: 2;
+		position: absolute;
+		display: none;
+		overflow: hidden;
+		width: 100%;
+		height: 0;
+		top: 0;
+		right:0;
+		background-color: green;
+		.opacity_cross(0.7);
+	}
+	& .confirmBtn {
+		position: absolute;
+		width: @btnWidth;
+		bottom: @btnBottomMargin;
+		right: @btnWidth + @gap*2;
+		height: @btnHeight;
+		cursor: pointer;
+		text-align: center;
+		color: white;
+		border-radius: 5px;
+		line-height: @btnHeight;
+		font-family: '微软雅黑';
+		background-color: blue;
+		&:hover {
+			background-color: rgb(14, 19, 212);
+		}
+	}
+	& .nextTime {
+		position: absolute;
+		width: @btnWidth;
+		bottom: @btnBottomMargin;
+		right: @gap;
+		height: @btnHeight;
+		cursor: pointer;
+		text-align: center;
+		color: white;
+		border-radius: 5px;
+		line-height: @btnHeight;
+		font-family: '微软雅黑';
+		background-color: rgb(128, 128, 161);
+		&:hover {
+			background-color: #B6B6E0;
+		}
+	}
+	& .picZone {
+		z-index: 1;
+		width: 40%;
+		height: 100%;
+		background-color: blue;
+		.opacity_cross(0.2);
+		position: absolute;
+		top:0;
+		left: 0;
+		& span{
+			position: absolute;
+			bottom: 0;
+			color: white;
+			font-size: 50px;
+		}
+	}
+	& .explains {
+		z-index: 1;
+		width: 60%;
+		height: 100%;
+		background-color: red;
+		.opacity_cross(0.2);
+		position: absolute;
+		top:0;
+		right: 0;
+		& span{
+			position: absolute;
+			bottom: 0;
+			color: white;
+			font-size: 20px;
+		}
+	}
+}
+@inputWidth:175px;
+@inputBorderradius:5px;
+.inputCommon(){
+	position: absolute;
+	bottom:@btnBottomMargin;
+	border: none;
+	padding: 0;
+	width: @inputWidth;
+	height: @btnHeight;
+	border-radius:@inputBorderradius;
+}
+#urname {
+	right: 2*@btnWidth+4*@gap+(@inputWidth+@gap)*2;
+	.inputCommon();
+}
+
+#urclass {
+	right: 2*@btnWidth+4*@gap+@inputWidth+@gap;
+	.inputCommon();
+}
+#urphone {
+	right: 2*@btnWidth+4*@gap;
+	.inputCommon();
 }

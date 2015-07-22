@@ -11,4 +11,16 @@ $(function() {
 		$(this).removeClass('biggerFont');
 		$(this).removeClass('slightMoveup');
 	});
+	$('#joinis').on('click',function() {
+		$('#displayArea .recruit').css('display','block');
+		$('#displayArea .recruit').animate({height:"80px"});
+	});
+	$('#displayArea .nextTime').on('click',function() {		
+		$('#displayArea .recruit').animate({height:"0px"},function() {
+			$(this).css('display','none');
+		});
+	});
+	$('#logoTitle').on('click',function() {
+		 window.location.href='index.html';
+	});
 })
