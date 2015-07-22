@@ -1,0 +1,110 @@
+#headerset {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  min-width: 800px;
+  height: 90px;
+  z-index: 6;
+  box-shadow: 0px 2px 5px #a1a1a1;
+}
+#headerset a {
+  font-family: '微软雅黑';
+  position: absolute;
+  top: 44px;
+  right: 90px;
+}
+#headerset a:link {
+  text-decoration: none;
+  color: #007423;
+}
+#headerset a:visited {
+  text-decoration: none;
+  color: #007423;
+}
+#headerset a:hover {
+  text-decoration: none;
+  color: #27B1B4;
+  cursor: pointer;
+}
+#headerset a:active {
+  text-decoration: none;
+  color: #007423;
+}
+#logoTitle {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+}
+#hublists {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+#hublists ul {
+  position: relative;
+  z-index: 2;
+  margin: 16px auto;
+  text-align: center;
+  padding-left: 0;
+  width: 648px;
+  height: 50px;
+}
+#hublists ul li {
+  float: left;
+  cursor: pointer;
+  position: relative;
+  width: 60px;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  border-radius: 5px;
+  background-color: #78d278;
+  margin-left: 20px;
+  height: auto;
+  list-style-type: none;
+  font-family: '微软雅黑';
+}
+#hublists ul li:hover {
+  background-color: green;
+  -webkit-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -ms-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+.banLine {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 22px;
+  left: 0;
+  min-width: 800px;
+  height: 5px;
+  background-color: #78d278;
+}
+.turnGreen {
+  background-color: green;
+  -webkit-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -ms-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+.biggerFont {
+  font-size: 25px;
+}
+.slightMoveup {
+  top: -5px;
+  -webkit-transition: top 0.4s ease;
+  -moz-transition: top 0.4s ease;
+  -ms-transition: top 0.4s ease;
+  -o-transition: top 0.4s ease;
+  transition: top 0.4s ease;
+}
+#displayArea {
+  width: 800px;
+  height: 400px;
+  background-color: blue;
+  opacity: 0.2;
+  margin: 30px auto;
+}

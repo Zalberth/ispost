@@ -1,0 +1,219 @@
+.opacity_cross(@opcty) {
+	 @opacityPercentage: @opcty * 100;
+	  filter: ~"alpha(opacity = (@{opacityPercentage}))";
+      -moz-opacity:@opcty;  
+      -khtml-opacity:@opcty;  
+      opacity:@opcty;
+}
+.transition_define(@prop; @duration; @mode) {
+	-webkit-transition: @prop @duration @mode;
+	-moz-transition: @prop @duration @mode;
+	-ms-transition: @prop @duration @mode;
+	-o-transition: @prop @duration @mode;
+	transition: @prop @duration @mode;
+}
+.animation_define(@aniName; @duration; @repeatMode) {
+	animation: @aniName @duration @repeatMode;
+	-webkit-animation: @aniName @duration @repeatMode;
+}
+@minW : 800px;
+@-webkit-keyframes hopping { /*prefix -webkit cannot be removed for Chrome*/
+  0% { top: 300px; }
+  50% { top: 320px; }
+  100% { top: 300px; }
+}
+#headerset {
+	background-color: white;
+	position: relative;
+	width:100%;
+	min-width: @minW;
+	height: 90px;
+	z-index: 6;
+	& a{
+		font-family: '微软雅黑';
+		position: absolute;
+		top:44px;
+		right: 90px;
+		&:link {
+			text-decoration: none;
+			color:#007423;
+		}
+		&:visited {
+			text-decoration: none;
+			color:#007423;
+		}
+		&:hover {
+			text-decoration: none;
+			color:#27B1B4;
+			cursor: pointer;
+		}
+		&:active {
+			text-decoration: none;
+			color:#007423;
+		}		
+	}
+
+}
+#logoTitle {
+	position: absolute;
+	top: 20px;
+	left:250px;
+}
+#centerZone {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	min-width:@minW;
+	height: 500px;
+	background-image: url("../images/index.png");
+	background-size: 100% 100%;
+	margin: 0 auto;
+	& a{
+		&:link {
+			text-decoration: none;
+		
+		}
+		&:visited {
+			text-decoration: none;	
+		}
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+		&:active {
+			text-decoration: none;
+		
+		}		
+	}
+	& .recruit {
+		position: absolute;
+		display: none;
+		overflow: hidden;
+		width: 400px;
+		height: 0;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		top: 0;
+		right: 20px;
+		background-color: green;
+		.opacity_cross(0.7);
+	}
+	& .confirmBtn {
+		position: absolute;
+		width: 100px;
+		bottom: 0;
+		left: 80px;
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+		color: white;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		line-height: 40px;
+		font-family: '微软雅黑';
+		background-color: blue;
+		&:hover {
+			background-color: rgb(14, 19, 212);
+		}
+	}
+	& .nextTime {
+		position: absolute;
+		width: 100px;
+		bottom: 0;
+		right: 80px;
+		height: 40px;
+		cursor: pointer;
+		text-align: center;
+		color: white;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		line-height: 40px;
+		font-family: '微软雅黑';
+		background-color: rgb(128, 128, 161);
+		&:hover {
+			background-color: #B6B6E0;
+		}
+	}
+
+}
+@inputHeight:30px;
+@inputWidth:260px;
+@leftT:(400 - @inputWidth)/2;
+@basicBottom:55px;
+@gap:15px;
+@inputBorderradius:8px;
+#urname {
+	position: absolute;
+	left: @leftT;
+	bottom:@basicBottom;
+	width: @inputWidth;
+	height: @inputHeight;
+	border-radius:@inputBorderradius;
+}
+#urclass {
+	position: absolute;
+	left: @leftT;
+	bottom: @basicBottom+@gap+ @inputHeight;
+	height: @inputHeight;
+	width: @inputWidth;
+	border-radius:@inputBorderradius;
+}
+#urphone {
+	position: absolute;
+	left: @leftT;
+	bottom: @basicBottom+@gap*2 + @inputHeight*2;
+	height: @inputHeight;
+	width: @inputWidth;
+	border-radius:@inputBorderradius;
+}
+#footer {
+	width: 100%;
+	min-width:@minW;
+	height: 50px;
+	background-color:#FECFB5;
+	text-align: center;
+}
+#copyright {
+	line-height: 44px;
+	color: white;
+	font-family: arial,'simsun',sans-serif;
+}
+#slots {
+	position: absolute;
+	top:300px;
+	left:20%;
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	background-color: #EEB799;
+	.opacity_cross(0.6);
+	cursor: pointer;
+	.animation_define(@aniName:hopping; @duration:1s; @repeatMode:infinite);
+}
+#mails {
+	position: absolute;
+	top:300px;
+	right:20%;
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	background-color: #EEB799;
+	cursor: pointer;
+	.opacity_cross(0.6);
+	.animation_define(@aniName:hopping; @duration:1s; @repeatMode:infinite);
+}
+#mails:hover {
+	border-radius: 50px;
+	.transition_define(@prop:border-radius; @duration:0.5s; @mode:ease);
+}
+#slots:hover {
+	border-radius: 50px;
+	.transition_define(@prop:border-radius; @duration:0.5s; @mode:ease);
+}
+.texter {
+	line-height: 100px;
+	font-size: 28px;
+	text-align: center;
+	color:white;
+	font-family: '微软雅黑';
+}

@@ -1,0 +1,116 @@
+@minW : 800px;
+.transition_define(@prop; @duration; @mode) {
+	-webkit-transition: @prop @duration @mode;
+	-moz-transition: @prop @duration @mode;
+	-ms-transition: @prop @duration @mode;
+	-o-transition: @prop @duration @mode;
+	transition: @prop @duration @mode;
+}
+.opacity_cross(@opcty) {
+	 @opacityPercentage: @opcty * 100;
+	  filter: ~"alpha(opacity = (@{opacityPercentage}))";
+      -moz-opacity:@opcty;  
+      -khtml-opacity:@opcty;  
+      opacity:@opcty;
+}
+#headerset {
+	background-color: white;
+	position: relative;
+	width:100%;
+	min-width: @minW;
+	height: 90px;
+	z-index: 6;
+	box-shadow: 0px 2px 5px rgb(161, 161, 161);
+	& a{
+		font-family: '微软雅黑';
+		position: absolute;
+		top:44px;
+		right: 90px;
+		&:link {
+			text-decoration: none;
+			color:#007423;
+		}
+		&:visited {
+			text-decoration: none;
+			color:#007423;
+		}
+		&:hover {
+			text-decoration: none;
+			color:#27B1B4;
+			cursor: pointer;
+		}
+		&:active {
+			text-decoration: none;
+			color:#007423;
+		}		
+	}
+
+}
+#logoTitle {
+	position: absolute;
+	top: 20px;
+	left:250px;
+}
+#hublists {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	& ul {
+		position: relative;
+		z-index: 2;
+		margin: 16px auto;
+		text-align: center;
+		padding-left: 0;
+		width: 648px;
+		height: 50px;
+		& li {
+			float: left;
+			cursor: pointer;
+			position: relative;
+			width: 60px;
+			text-align: center;
+			color: white;
+			line-height: 50px;
+			border-radius: 5px;
+			background-color: rgb(120, 210, 120);
+			margin-left: 20px;
+			height: auto;
+			list-style-type:none;
+			font-family: '微软雅黑';
+			&:hover {
+				background-color: green;
+				.transition_define(@prop:background-color; @duration:0.4s; @mode:ease);
+			}
+		}
+	}
+}
+.banLine {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top:22px;
+	left: 0;
+	min-width: 800px;
+	height: 5px;
+	background-color: rgb(120, 210, 120);
+}
+.turnGreen {
+	background-color: green;
+	.transition_define(@prop:background-color; @duration:0.4s; @mode:ease);
+}
+.biggerFont {
+	font-size: 25px;
+}
+.slightMoveup {
+	top: -5px;
+	.transition_define(@prop:top; @duration:0.4s; @mode:ease);
+}
+
+
+#displayArea {
+	width: 800px;
+	height: 400px;
+	background-color: blue;
+	opacity: 0.2;
+	margin: 30px auto;
+}
