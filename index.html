@@ -3,10 +3,9 @@
 <head>
     <meta charset='utf-8'>
 	<title>易思邮局</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="cssmin/normalize.css">
+	<link rel="stylesheet" type="text/css" href="cssmin/main.css">
+	<link rel="stylesheet" type="text/css" href="cssmin/progressbarIs.css">
 </head>
 <body>
 	<div id="headerset">
@@ -16,11 +15,13 @@
 	</div>
 	<div id="centerZone">
 		<div class="recruit">
-			<input id="urname" type="text" name="urname" placeholder="姓名"/>
-			<input id="urclass" type="text" name="urclass" placeholder="班级"/>
-			<input id="urphone" type="text" name="urphone" placeholder="电话"/>
-			<div class="confirmBtn">确认报名</div>
-			<div class="nextTime">以后再说</div>
+		    <form id="recruitForm">
+		    	<input id="urname" type="text" name="urname" placeholder="姓名"/>
+		    	<input id="urclass" type="text" name="urclass" placeholder="班级"/>
+		    	<input id="urphone" type="text" name="urphone" placeholder="电话"/>
+		    	<div class="confirmBtn">确认报名</div>
+		    	<div class="nextTime">以后再说</div>
+		    </form>			
 		</div>
 		<div id="slots">
 			<a href="slots.html"><div class="texter">格子铺</div></a>
@@ -30,5 +31,7 @@
 		</div>
 	</div>
 	<div id="footer"><span id="copyright">Copyright © 2015  易思邮局</span></div>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script type="text/javascript" src="jsmin/main.js"></script>
 </body>
 </html>

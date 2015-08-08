@@ -1,4 +1,10 @@
 @minW : 800px;
+* {
+	font-family: '微软雅黑';
+}
+body {
+	height: 100%;
+}
 .transition_define(@prop; @duration; @mode) {
 	-webkit-transition: @prop @duration @mode;
 	-moz-transition: @prop @duration @mode;
@@ -22,7 +28,7 @@
 	z-index: 6;
 	box-shadow: 0px 2px 5px rgb(161, 161, 161);
 	& a{
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		position: absolute;
 		top:44px;
 		right: 90px;
@@ -75,12 +81,17 @@
 			border-radius: 5px;
 			background-color: rgb(120, 210, 120);
 			margin-left: 20px;
-			height: auto;
+			height: 50px;
+			box-sizing:border-box;
 			list-style-type:none;
-			font-family: '微软雅黑';
+			font-family: '微软雅黑','STHeiti Light';
 			&:hover {
 				background-color: green;
 				.transition_define(@prop:background-color; @duration:0.4s; @mode:ease);
+			}
+			&.selected {
+				border: 2px solid green;
+				line-height: 46px;
 			}
 		}
 	}
@@ -116,10 +127,10 @@
 	width: 800px;
 	height: 400px;
 	background-color: white;
-	border: 2px dashed black;
+	box-shadow: 2px 2px 8px rgb(178, 177, 177);
 	margin: 30px auto;
 	& .recruit {
-		z-index: 2;
+		z-index: 3;
 		position: absolute;
 		display: none;
 		overflow: hidden;
@@ -128,7 +139,10 @@
 		top: 0;
 		right:0;
 		background-color: green;
-		.opacity_cross(0.7);
+		& input {
+			font-family: '微软雅黑','STHeiti Light';
+			text-align: center;
+		}
 	}
 	& .confirmBtn {
 		position: absolute;
@@ -141,7 +155,7 @@
 		color: white;
 		border-radius: 5px;
 		line-height: @btnHeight;
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		background-color: blue;
 		&:hover {
 			background-color: rgb(14, 19, 212);
@@ -158,18 +172,18 @@
 		color: white;
 		border-radius: 5px;
 		line-height: @btnHeight;
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		background-color: rgb(128, 128, 161);
 		&:hover {
 			background-color: #B6B6E0;
 		}
 	}
 	& .picZone {
-		z-index: 1;
+		z-index: 2;
 		width: 40%;
 		height: 100%;
 		background-color: blue;
-		.opacity_cross(0.2);
+		box-shadow: 5px 0 0 rgb(227, 226, 226);
 		position: absolute;
 		top:0;
 		left: 0;
@@ -184,16 +198,18 @@
 		z-index: 1;
 		width: 60%;
 		height: 100%;
-		background-color: red;
-		.opacity_cross(0.2);
+		background-color: white;
 		position: absolute;
+		overflow: hidden;
 		top:0;
 		right: 0;
-		& span{
+		& p {
+			color: black;
 			position: absolute;
-			bottom: 0;
-			color: white;
-			font-size: 20px;
+			left: -440px;
+			top: 0;
+			padding-left: 40px;
+			width: 400px
 		}
 	}
 }
@@ -220,4 +236,13 @@
 #urphone {
 	right: 2*@btnWidth+4*@gap;
 	.inputCommon();
+}
+#footer {
+	width: 100%;
+	height: 100px;
+	line-height:50px;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	background-color: rgb(22, 87, 42);
 }

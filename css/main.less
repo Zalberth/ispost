@@ -30,7 +30,7 @@
 	height: 90px;
 	z-index: 6;
 	& a{
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		position: absolute;
 		top:44px;
 		right: 90px;
@@ -98,6 +98,10 @@
 		right: 20px;
 		background-color: green;
 		.opacity_cross(0.7);
+		& input {
+			font-family: '微软雅黑','STHeiti Light';
+			text-align: center;
+		}
 	}
 	& .confirmBtn {
 		position: absolute;
@@ -111,7 +115,7 @@
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 		line-height: 40px;
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		background-color: blue;
 		&:hover {
 			background-color: rgb(14, 19, 212);
@@ -129,7 +133,7 @@
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
 		line-height: 40px;
-		font-family: '微软雅黑';
+		font-family: '微软雅黑','STHeiti Light';
 		background-color: rgb(128, 128, 161);
 		&:hover {
 			background-color: #B6B6E0;
@@ -154,7 +158,7 @@
 }
 #urname {
     .inputStyle();	
-	bottom:@basicBottom;
+	bottom: @basicBottom+@gap*2 + @inputHeight*2;
 }
 #urclass {
 	.inputStyle();	
@@ -163,14 +167,18 @@
 }
 #urphone {
 	.inputStyle();	
-	bottom: @basicBottom+@gap*2 + @inputHeight*2;
+	bottom:@basicBottom;
 }
+
 #footer {
 	width: 100%;
 	min-width:@minW;
-	height: 50px;
-	background-color:#FECFB5;
+	height: 100px;
+	line-height:50px;
+	font-size: 12px;
+	color: white;
 	text-align: center;
+	background-color: rgb(22, 87, 42);
 }
 #copyright {
 	line-height: 44px;
@@ -214,5 +222,29 @@
 	font-size: 28px;
 	text-align: center;
 	color:white;
-	font-family: '微软雅黑';
+	font-family: '微软雅黑','STHeiti Light';
+}
+
+//plugins
+.progressbarIs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:0;
+	height: 6px;
+	background-color: #F49C31;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	z-index: 50;
+	box-shadow: 0 2px 5px black;
+}
+.mask4progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color: white;
+	z-index: 49;
+	.opacity_cross(0.4);	
 }
