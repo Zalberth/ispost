@@ -1,0 +1,29 @@
+//plugins
+.opacity_cross(@opcty) {
+	  @opacityPercentage: @opcty * 100;
+	  filter: ~"alpha(opacity = (@{opacityPercentage}))";
+      -moz-opacity:@opcty;  
+      -khtml-opacity:@opcty;  
+      opacity:@opcty;
+}
+.progressbarIs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:0;
+	height: 6px;
+	background-color: rgb(58, 41, 244);
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	z-index: 50;
+}
+.mask4progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 100%;
+	background-color: white;
+	z-index: 49;
+	.opacity_cross(0.4);	
+}

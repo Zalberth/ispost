@@ -3,10 +3,9 @@
 <head>
 	<meta charset='utf-8'>
 	<title>格子铺</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/slots.css">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/slots.js"></script>
+	<link rel="stylesheet" type="text/css" href="cssmin/normalize.css">
+	<link rel="stylesheet" type="text/css" href="cssmin/slots.css">
+	<link rel="stylesheet" type="text/css" href="cssmin/progressbarIs.css">	
 </head>
 <body>
 	<div id="headerset">
@@ -15,31 +14,28 @@
 	</div>
 	<div id="displayArea">
 		<div class="recruit">
+		    <form id="recruitForm">
 			<input id="urname" type="text" name="urname" placeholder="姓名"/>
 			<input id="urclass" type="text" name="urclass" placeholder="班级"/>
 			<input id="urphone" type="text" name="urphone" placeholder="电话"/>
 			<div class="confirmBtn">确认报名</div>
 			<div class="nextTime">以后再说</div>
+			</form>
 		</div>
 		<div class="picZone">
-			<span>实物图</span>
+			<img src="images/slots/a11.jpg">
 		</div>
 		<div class="explains">
-			<span>文字说明(虚线暂时用于定位，LIST 2 JSON)</span>
+			<p style="left:0">虚线边框暂时保留用于定位，后期移除，不再显示。接下来要进行组件化为功能复用作准备</p>
 		</div>
 	</div>
 	<div id="hublists">
 	    <div class="banLine"></div>
 		<ul>
-			<li>A11</li>
-			<li>A12</li>
-			<li>A13</li>
-			<li>A14</li>
-			<li>A15</li>
-			<li>A21</li>
-			<li>A22</li>
-			<li>A23</li>
 		</ul>
 	</div>
+	<div id="footer">Copyright © 2015  易思邮局</div>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script type="text/javascript" src="jsmin/slots.js"></script>
 </body>
 </html>
